@@ -1,0 +1,151 @@
+@import '../../../node_modules/normalize-styl/normalize.styl'
+@import './fonts'
+@import './preloader'
+
+*
+  box-sizing border-box
+
+html
+  height 100%
+
+body
+  height 100%
+  background #1e252b
+  font-family Futura
+  color #000
+  display flex
+  flex-direction column
+  height 100%
+
+.wrapper
+  flex 1 0 auto
+  width 100%
+  padding-top 30px
+  .container
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+
+.container
+  width 1150px
+  margin 0 auto
+  padding 0 10px
+  @media(max-width 1085px)
+    width 100%
+
+header
+  width 100%
+  background #546777
+  box-shadow: 0 4px 4px rgba(0,0,0,.24), 0 0 4px rgba(0,0,0,.12);
+  nav
+    a
+      color #fff
+      display inline-block
+      text-decoration none
+      padding 10px 0
+      font-size 24px
+      font-weight 100
+      &:hover
+        text-decoration underline
+
+span.headline
+    background #546777
+    box-shadow: 0 4px 4px rgba(0,0,0,.24), 0 0 4px rgba(0,0,0,.12);
+    display block
+    padding 5px 10px
+    font-weight 300
+    font-size 22px
+    color #fff
+    
+.sidebar
+  width 150px
+  a
+    display block
+    color #fff
+    text-decoration none
+    font-weight 100
+    font-size 20px
+    padding 5px
+    &:hover
+      background #54677780
+  .active
+    background #54677780
+    
+.content
+  width 950px
+  // background red
+  .movies-flex
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    align-content center
+    .movies-item
+      width 19%
+      margin-bottom 10px
+      cursor pointer
+      transition .15s
+      &:hover
+        transform scale(1.05)
+      img
+        width 100%
+        height 270px
+      .movie-title
+        color #fff
+        margin 10px 0
+        font-weight 100
+        margin-right 10px
+      .movie-rating, .movie-year
+        color #f39c12
+        margin 10px 0
+        font-weight 100
+        margin-right 10px
+
+.top-headline
+  margin-bottom 15px
+  
+.movie-show
+  margin-bottom 20px
+  padding-bottom 100px
+  .movie-cover
+    position relative
+    font-size 0
+    img
+      width 100%
+    .movie-cover-overlay
+      position absolute
+      bottom 0
+      width 100%
+      background rgba(0, 0, 0, .7)
+      padding 20px
+      color #fff
+      h1
+        font-size 28px
+        margin 0
+        margin-bottom 10px
+      p
+        font-size 20px
+        font-weight 100
+      span.movie-rating
+        font-size: 32px
+        color #f39c12
+        background #fff
+        display inline-block
+        width 70px
+        text-align center
+        border-radius 30px
+        padding 10px
+        font-weight 500
+        margin-right 20px
+      span.movie-genres
+        display inline-block
+        font-size: 16px
+        background #f39c12
+        padding 5px 10px
+        margin-right 10px
+        border-radius 5px
+        color #000
+        cursor pointer
+        &:hover
+          background #b16d00
+  iframe
+    margin-top 30px
